@@ -1,0 +1,9 @@
+<h1>List of ratings</h1>
+
+<p>Number of ratings: <%= @ratings.count %></p>
+<ul>
+    <% @ratings.each do |rating| %>
+        <li> <%= rating %> <%= link_to 'delete', rating, method: :delete, data: {confirm: 'are you sure?'}%></li>
+    <% end %>
+</ul>
+<%= link_to 'New', new_rating_path %>

@@ -1,0 +1,174 @@
+irb(main):003:0> Breweries.new name:BrewDog, year:2007
+NameError: uninitialized constant Breweries
+	from (irb):3
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/jola/programming/ratebeer/bin/rails:8:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+irb(main):004:0> Brewery.new name:BrewDog, year:2007
+NameError: uninitialized constant BrewDog
+	from (irb):4
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/jola/programming/ratebeer/bin/rails:8:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+irb(main):005:0> Brewery.new name:'BrewDog', year:2007
+=> #<Brewery id: nil, name: "BrewDog", year: 2007, created_at: nil, updated_at: nil>
+irb(main):006:0> _.save
+   (0.2ms)  begin transaction
+  SQL (0.6ms)  INSERT INTO "breweries" ("name", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "BrewDog"], ["year", 2007], ["created_at", "2015-01-24 14:01:27.639764"], ["updated_at", "2015-01-24 14:01:27.639764"]]
+   (197.2ms)  commit transaction
+=> true
+irb(main):007:0> brewdog = Breweries.name "BrewDog"
+NameError: uninitialized constant Breweries
+	from (irb):7
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/jola/programming/ratebeer/bin/rails:8:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+irb(main):008:0> brewdog = Brewery.name "BrewDog"
+ArgumentError: wrong number of arguments (1 for 0)
+	from (irb):8:in `name'
+	from (irb):8
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /home/jola/programming/ratebeer/bin/rails:8:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):009:0> 
+irb(main):010:0* 
+irb(main):011:0* brewdog = Brewery.find_by name"BrewDog"
+NoMethodError: undefined method `name' for main:Object
+	from (irb):11
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /home/jola/programming/ratebeer/bin/rails:8:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):012:0> 
+irb(main):013:0* 
+irb(main):014:0* brewdog = Brewery.find_by name:"BrewDog"
+  Brewery Load (0.3ms)  SELECT  "breweries".* FROM "breweries" WHERE "breweries"."name" = ? LIMIT 1  [["name", "BrewDog"]]
+=> #<Brewery id: 5, name: "BrewDog", year: 2007, created_at: "2015-01-24 14:01:27", updated_at: "2015-01-24 14:01:27">
+irb(main):015:0> Beer.create name:"Punk IPA", style:"IPA", brewery_id:brewdog.id
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Punk IPA"], ["style", "IPA"], ["brewery_id", 5], ["created_at", "2015-01-24 14:06:18.248462"], ["updated_at", "2015-01-24 14:06:18.248462"]]
+   (169.8ms)  commit transaction
+=> #<Beer id: 13, name: "Punk IPA", style: "IPA", brewery_id: 5, created_at: "2015-01-24 14:06:18", updated_at: "2015-01-24 14:06:18">
+irb(main):016:0> Beer.create name:"Nanny State", style:"lowalcohol", brewery_id:brewdog.id
+   (0.2ms)  begin transaction
+  SQL (0.5ms)  INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Nanny State"], ["style", "lowalcohol"], ["brewery_id", 5], ["created_at", "2015-01-24 14:06:52.268976"], ["updated_at", "2015-01-24 14:06:52.268976"]]
+   (209.1ms)  commit transaction
+=> #<Beer id: 14, name: "Nanny State", style: "lowalcohol", brewery_id: 5, created_at: "2015-01-24 14:06:52", updated_at: "2015-01-24 14:06:52">
+irb(main):017:0> (brewdog.find 1).ratings.create score:34
+NoMethodError: undefined method `find' for #<Brewery:0x007fa6b0151388>
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activemodel-4.2.0/lib/active_model/attribute_methods.rb:433:in `method_missing'
+	from (irb):17
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:110:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/console.rb:9:in `start'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `block in require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:274:in `require'
+	from /home/jola/programming/ratebeer/bin/rails:8:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/commands/rails.rb:6:in `call'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/command_wrapper.rb:38:in `call'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:183:in `block in serve'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `fork'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:156:in `serve'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:131:in `block in run'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `loop'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application.rb:125:in `run'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/spring-1.2.0/lib/spring/application/boot.rb:18:in `<top (required)>'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /home/jola/.rbenv/versions/2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'irb(main):018:0> 
+irb(main):019:0* punkipa = Beer.find_by name:"Punk IPA"
+  Beer Load (0.4ms)  SELECT  "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT 1  [["name", "Punk IPA"]]
+=> #<Beer id: 13, name: "Punk IPA", style: "IPA", brewery_id: 5, created_at: "2015-01-24 14:06:18", updated_at: "2015-01-24 14:06:18">
+irb(main):020:0> punkipa.ratings.create score:34
+   (0.2ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 34], ["beer_id", 13], ["created_at", "2015-01-24 14:08:30.798628"], ["updated_at", "2015-01-24 14:08:30.798628"]]
+   (211.4ms)  commit transaction
+=> #<Rating id: 2, score: 34, beer_id: 13, created_at: "2015-01-24 14:08:30", updated_at: "2015-01-24 14:08:30">
+irb(main):021:0> punkipa.ratings.create score:29
+   (0.2ms)  begin transaction
+  SQL (0.5ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 29], ["beer_id", 13], ["created_at", "2015-01-24 14:08:38.193523"], ["updated_at", "2015-01-24 14:08:38.193523"]]
+   (221.5ms)  commit transaction
+=> #<Rating id: 3, score: 29, beer_id: 13, created_at: "2015-01-24 14:08:38", updated_at: "2015-01-24 14:08:38">
+irb(main):022:0> nannystate = Beer.find_by name:"Nanny State"
+  Beer Load (0.3ms)  SELECT  "beers".* FROM "beers" WHERE "beers"."name" = ? LIMIT 1  [["name", "Nanny State"]]
+=> #<Beer id: 14, name: "Nanny State", style: "lowalcohol", brewery_id: 5, created_at: "2015-01-24 14:06:52", updated_at: "2015-01-24 14:06:52">
+irb(main):023:0> nannystate.ratings.create score:27
+   (0.1ms)  begin transaction
+  SQL (0.3ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 27], ["beer_id", 14], ["created_at", "2015-01-24 14:09:15.409453"], ["updated_at", "2015-01-24 14:09:15.409453"]]
+   (191.5ms)  commit transaction
+=> #<Rating id: 4, score: 27, beer_id: 14, created_at: "2015-01-24 14:09:15", updated_at: "2015-01-24 14:09:15">
+irb(main):024:0> nannystate.ratings.create score:30
+   (0.2ms)  begin transaction
+  SQL (0.5ms)  INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 30], ["beer_id", 14], ["created_at", "2015-01-24 14:09:28.304541"], ["updated_at", "2015-01-24 14:09:28.304541"]]
+   (202.0ms)  commit transaction
+=> #<Rating id: 5, score: 30, beer_id: 14, created_at: "2015-01-24 14:09:28", updated_at: "2015-01-24 14:09:28">
+irb(main):025:0> 
