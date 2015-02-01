@@ -15,7 +15,7 @@ class RatingsController < ApplicationController
             current_user.ratings << rating
             redirect_to current_user
         else
-            @beers. = Beer.all
+            @beers = Beer.all
             render :new
         end
     end
