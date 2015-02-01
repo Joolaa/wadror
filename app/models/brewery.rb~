@@ -1,8 +1,15 @@
 class Brewery < ActiveRecord::Base
+    include RatingAverage
     has_many :beers, dependent: :destroy
     has_many :ratings, through: :beers
 
-    def average_rating
-        self.beers.map{|beer| beer.average_rating}.inject{|sum, n| sum + n} / self.beers.count
+    validates :name, presence: true
+    validates :year, numericality: { greater_than_or_equal_to: 1024,
+                                     lesser_than_or_equal_to: valid_max_year,
+                                     only_integer: true }
+
+    def valid_max_year
+        Date.tomorrow.year
     end
+
 end

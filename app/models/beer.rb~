@@ -1,11 +1,11 @@
 class Beer < ActiveRecord::Base
+    include RatingAverage
+    
     belongs_to :brewery
     has_many :ratings, dependent: :destroy
+    has_many :raters, -> { uniq }, through :ratings, source: :user
 
-    def average_rating
-        self.ratings.map{|rating| rating.score}.inject{|sum, n| sum + n} /
-            (self.ratings.count + 0.0)
-    end
+    validates :name, presence: true
 
     def to_s
         "#{self.name}, #{self.brewery.name}"
