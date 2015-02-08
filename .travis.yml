@@ -1,10 +1,16 @@
 language: ruby
-
 rvm:
- - 2.2.0
-
+- 2.2.0
 script:
- - bundle exec rake db:migrate --trace
- - RAILS_ENV=test bundle exec rake db:migrate --trace
- - bundle exec rake db:test:prepare
- - bundle exec rspec -fd spec/
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec -fd spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: D7wkRXqSTqCXpnTbNK5Vg7ZSzYFxaUS9yhgbcPd1KySsUI77Lie8zKxkDNOF85CTj7VvOh8cySqOTPu7+3D7FGXCpSsiZNsDTT5zUGxEFffxEFpFhwRgB3HJm0R2HWAoBq0mSp2sLMwBJTpPodITCyUPBcpR6tKGCPQFj3rbPFI=
+  app: pacific-caverns-8696
+  run: "rake db:migrate"
+  on:
+    repo: Joolaa/wadror
