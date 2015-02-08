@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
                 notice: "Welcome back, #{user.username}."
         else
             redirect_to :back, 
-                notice: "User #{params[:username]} does not exist."
+                notice: "Username and/or password mismatch"
         end
     end
 

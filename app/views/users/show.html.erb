@@ -21,7 +21,7 @@
         <li>
         <%= r.to_s %>
         <% if @user == current_user %>
-            <%= link_to 'delete', r, method: :delete, data: { confirm: 'Are you sure?'} %>
+            <%= link_to 'delete', r, method: :delete%>
         <% end %>
         </li>
     <% end %>

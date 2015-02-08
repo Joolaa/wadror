@@ -28,6 +28,7 @@
     This brewery has no ratings yet
 <% else %>
     <%= "Rated #{pluralize(@brewery.ratings.count, "times")}, average #{@brewery.average_rating}" %>
+<% end %>
 </p>
 
 

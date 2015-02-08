@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :memberships
 
   resources :beer_clubs
@@ -20,7 +21,6 @@ Rails.application.routes.draw do
   get 'ratings/new', to:'ratings#new'
   post 'ratings', to:'ratings#create'
   get 'sessions/new', to:'sessions#new'
-  get 'memberships/new', to: 'memberships#new'
   delete 'users/delete', to: 'users#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
