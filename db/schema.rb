@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 20150201205138) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "memberhips", force: :cascade do |t|
+    t.integer  "beer_club_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "memberships", force: :cascade do |t|
     t.integer  "beer_club_id"
     t.integer  "user_id"

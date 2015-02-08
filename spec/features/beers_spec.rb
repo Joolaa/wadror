@@ -2,9 +2,12 @@ require 'rails_helper'
 
 describe "Beer" do
     before :each do
+        FactoryGirl.create :user
         FactoryGirl.create :beer
+        sign_in(username:"Pekka", password:"Foobar1")
     end
-    describe "beer is saved properly if" do
+
+    describe "is saved properly if" do
         it "is saved if given non-empty name" do
             visit new_beer_path
             fill_in('Name', with:"testi")
@@ -16,7 +19,7 @@ describe "Beer" do
         end
     end
 
-    describe "beer is not saved if" do
+    describe "is not saved if" do
         it "is attempted to be saved with invalid name" do
             visit new_beer_path
             fill_in('Name', with:"")
