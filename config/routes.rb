@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   post 'ratings', to:'ratings#create'
   get 'sessions/new', to:'sessions#new'
   delete 'users/delete', to: 'users#destroy'
+  get 'places', to: 'places#index'
+  post 'places', to:'places#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

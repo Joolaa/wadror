@@ -23,6 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'httparty'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -56,6 +58,7 @@ group :test do
     gem 'simplecov', require: false
     gem 'selenium'
     gem 'selenium-webdriver'
+    gem 'webmock'
 end
 
 group :development, :test do
